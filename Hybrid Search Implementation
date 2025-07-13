@@ -1,0 +1,8 @@
+def hybrid_search(query: str, vector_db: QdrantClient, text_db: Session):
+    """Combine vector and metadata filtering"""
+    vector_results = vector_db.search(
+        query_vector=embed(query),
+        with_payload=True,
+        score_threshold=0.3
+    )
+    return apply_metadata_filters(vector_results, text_db)
