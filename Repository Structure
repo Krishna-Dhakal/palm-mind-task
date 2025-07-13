@@ -1,0 +1,17 @@
+palm-mind-task/
+├── app/
+│   ├── core/                  # Core configurations
+│   ├── models/                # Database models
+│   ├── schemas/               # Pydantic schemas
+│   ├── services/              # Business logic
+│   │   ├── chunking/          # Chunking strategies
+│   │   ├── embedding/         # Embedding models
+│   │   ├── vector_db/         # Vector DB operations
+│   ├── api/                   # API endpoints
+│   │   ├── file_processing.py
+│   │   ├── rag_agent.py
+│   ├── utils/                 # Utility functions
+├── tests/                     # Test cases
+├── Dockerfile
+├── requirements.txt
+├── README.md
