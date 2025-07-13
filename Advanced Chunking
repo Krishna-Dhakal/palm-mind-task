@@ -1,0 +1,6 @@
+def semantic_chunker(text: str, model: SentenceTransformer) -> List[str]:
+    """Split text based on semantic boundaries using NLP"""
+    sentences = sent_tokenize(text)
+    embeddings = model.encode(sentences)
+    clusters = cluster_embeddings(embeddings)
+    return [" ".join(sentences[i] for i in cluster) for cluster in clusters]
