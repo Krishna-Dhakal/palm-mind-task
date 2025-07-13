@@ -1,0 +1,10 @@
+# Metadata model
+class DocumentMetadata(Base):
+    __tablename__ = "document_metadata"
+    id = Column(UUID, primary_key=True)
+    file_name = Column(String)
+    file_size = Column(Integer)
+    chunking_method = Column(String)
+    embedding_model = Column(String)
+    created_at = Column(DateTime)
+    chunks = relationship("DocumentChunk", back_populates="document")
