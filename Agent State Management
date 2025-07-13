@@ -1,0 +1,5 @@
+class AgentState(TypedDict):
+    messages: List[dict]
+    current_query: str
+    available_tools: List[str]
+    interview_details: Optional[dict]
