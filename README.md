@@ -1,1 +1,1 @@
-# palm-mind-task
+# pal
